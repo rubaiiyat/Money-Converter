@@ -1,0 +1,10 @@
+body {
+  margin: 20px;
+  margin-bottom: 50px;
+}
+.image img {
+  width: 500px;
+}
+.total-income {
+  background-color: rgb(235, 232, 232);
+}
