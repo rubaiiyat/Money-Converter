@@ -2,9 +2,13 @@ body {
   margin: 20px;
   margin-bottom: 50px;
 }
+
+/* Body Image  */
 .image img {
   width: 500px;
 }
+
+/* total Income and Cost  Calculate style */
 .total-income {
   background-color: rgb(235, 232, 232);
   width: 50%;
@@ -12,6 +16,7 @@ body {
   padding-bottom: 50px;
 }
 
+/* Error Massege Style  */
 .error-field {
   background-color: rgb(252, 126, 126);
   color: rgb(77, 4, 4);
@@ -22,15 +27,20 @@ body {
   border-radius: 5px;
   border: 1px solid;
 }
+
+/* Website Responsive  */
 @media only screen and (max-width: 688px) {
   body {
     margin: 0;
     padding: 0;
   }
+
+  /* Body Image  */
   .image img {
     width: 100%;
   }
 
+  /* total Income and Cost  Calculate style */
   .total-income {
     height: 100%;
     width: 100%;

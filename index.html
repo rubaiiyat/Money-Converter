@@ -14,6 +14,8 @@
 
     <!-- CSS Style  -->
     <link rel="stylesheet" href="CSS/style.css" />
+
+    
     <title>Money Master</title>
   </head>
   <body>
@@ -22,14 +24,22 @@
     </header>
     <main>
       <section class="mt-4">
+
+        <!-- Body Image  -->
         <div class="d-lg-flex d-md-flex justify-content-around">
           <div class="image">
             <img src="IMAGE/img.jpg" alt="" />
           </div>
+
+          <!-----------------------
+                    Total Income Balacne 
+                                 ---------------------->
           <div class="total-income  text-center">
             <h1 class="mt-4">Income</h1>
             <div class="container mt-4">
               <div class="row d-flex justify-content-center mb-3">
+
+                <!-- Main Income  -->
                 <div class="col-2 d-flex justify-content-end">
                   <h5>Income:</h5>
                 </div>
@@ -43,6 +53,8 @@
               </div>
 
               <h4 class="mb-4">Expenses</h4>
+
+              <!-- Food Cost  -->
               <div class="row d-flex justify-content-center mb-3">
                 <div class="col-2 d-flex justify-content-end">
                   <h5>Food:</h5>
@@ -55,6 +67,8 @@
                   />
                 </div>
               </div>
+
+              <!--  Rent Cost  -->
               <div class="row d-flex justify-content-center mb-3">
                 <div class="col-2 d-flex justify-content-end">
                   <h5>Rent:</h5>
@@ -67,6 +81,8 @@
                   />
                 </div>
               </div>
+
+              <!-- Clothes Cost  -->
               <div class="row d-flex justify-content-center mb-3">
                 <div class="col-2 d-flex justify-content-end">
                   <h5>Clothes:</h5>
@@ -81,11 +97,15 @@
               </div>
             </div>
             <div>
+
+              <!-- Error Message Field  -->
               <div>
                 <h6 id="error-field" class="error-field">
                   Error!Please Type Positive Number
                 </h6>
               </div>
+
+              <!-- Total Calculate Button  -->
               <button
                 id="income-calculate-btn"
                 type="button"
@@ -93,10 +113,16 @@
               >
                 Calculate
               </button>
+
+              <!-- Total Expensess  -->
               <h3 class="mb-3">
                 Total Expenses: $<span id="total-expenses">00</span>
               </h3>
+
+              <!-- Total Balance  -->
               <h3>Balance: $<span id="rest-balance">00</span></h3>
+
+              <!-- Save Money Parcentage  -->
               <div
                 class="d-flex justify-content-center align-items-center mt-3"
               >
@@ -107,20 +133,28 @@
                   <input id="save-input" type="text" value="20" />
                 </div>
                 <div class="mx-2">%</div>
+
+                <!-- Parcentage Button  -->
                 <div class="mx-2">
                   <button id="save-btn" type="button" class="btn btn-primary">
                     Save
                   </button>
                 </div>
               </div>
+
+              <!-- Total Save Amount  -->
               <div class="mt-3">
                 <h3 class="mb-5">
                   Saving Amount: <span id="saving-amount">00</span>
                 </h3>
+
+                <!-- Remaining Balance  -->
                 <h3 class=>
                   Remaining Balance: <span id="remaining-balance"> 00</span>
                 </h3>
               </div>
+
+              <!-- Error Massese  -->
               <div>
                 <h6 id="save-error" class="error-field">
                   Error!Please Type Positive Number

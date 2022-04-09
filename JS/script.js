@@ -1,3 +1,4 @@
+// Main Function
 function updateInput(inputvalue) {
   const inputNum = document.getElementById(inputvalue);
   const inputText = inputNum.value;
@@ -5,22 +6,30 @@ function updateInput(inputvalue) {
   return inputFloat;
 }
 
+// Calculate Income
 document
   .getElementById("income-calculate-btn")
   .addEventListener("click", function () {
+    // main Income ID
     const totalIncome = updateInput("total-income-input");
 
+    // FoodCost ID
     const foodCostInput = updateInput("food-cost-input");
 
+    // Rent Cost ID
     const rentCostInput = updateInput("rent-cost-input");
 
+    // Clothes Cost ID
     const clothesCostInput = updateInput("clothes-cost-input");
 
+    // Total Expenses AND Total Balance ID
     const totalExpenses = document.getElementById("total-expenses");
     const totalBalacne = document.getElementById("rest-balance");
 
+    // Error Massege ID
     const errorField = document.getElementById("error-field");
 
+    // Condition
     if (isNaN(totalIncome)) {
       errorField.style.display = "block";
       errorField.innerText =
@@ -50,6 +59,7 @@ document
       errorField.innerText =
         "SORRY! Expenses cost more than your total income. Total income should be input more than expenses";
     } else {
+      // Total Calculate here
       errorField.style.display = "none";
       const totalExpensesSum = foodCostInput + rentCostInput + clothesCostInput;
       totalExpenses.innerText = totalExpensesSum;
@@ -59,25 +69,36 @@ document
     }
   });
 
+// Save Money and Remaining Money
 document.getElementById("save-btn").addEventListener("click", function () {
+  // Rest Balacne ID
   const restBalacne = document.getElementById("rest-balance").innerText;
 
+  // Input Parcentange ID
   const saveInput = document.getElementById("save-input");
   const saveInputValue = parseFloat(saveInput.value);
   saveInput.value = saveInputValue;
 
+  // Save Amount AND Remaining Amount Input ID
   const savingAmount = document.getElementById("saving-amount");
   const remainingBalance = document.getElementById("remaining-balance");
 
+  // Total save and remaining CALCULATION
   const totalSavingAmount = (saveInputValue / 100) * restBalacne;
   const totalRemainingBalacne = restBalacne - totalSavingAmount;
 
+  // Error Massege
   const errorField = document.getElementById("save-error");
 
+  // Condition
   if (isNaN(saveInputValue)) {
     errorField.style.display = "block";
     errorField.innerText =
       "Error! Please Enter Positive Number Saving Input Field";
+  } else if (restBalacne < 1) {
+    errorField.style.display = "block";
+    errorField.innerText =
+      "SORRY! Your Amount is 00, So you can't convert your money";
   } else if (saveInputValue < 1) {
     errorField.style.display = "block";
     errorField.innerText = "Error! Please enter number greater than 0";
@@ -90,42 +111,3 @@ document.getElementById("save-btn").addEventListener("click", function () {
     remainingBalance.innerText = totalRemainingBalacne;
   }
 });
-
-/* function updateBalance() {
-  // Total Food Cost
-  const foodCostInput = document.getElementById("food-cost-input");
-  const foodCostValue = parseFloat(foodCostInput.value);
-
-  // Total Rent Cost
-  const rentCostInput = document.getElementById("rent-cost-input");
-  const rentCostValue = parseFloat(rentCostInput.value);
-
-  // Total Clothes Cost
-  const clothesCostInput = document.getElementById("clothes-cost-input");
-  const clothesCostValue = parseFloat(clothesCostInput.value);
-
-  //    Total Expenses
-  const totalExpensesValue = document.getElementById("total-expenses");
-  const totalExpensesText = parseFloat(totalExpensesValue.innerText);
-  const totalExpenses = foodCostValue + rentCostValue + clothesCostValue;
-
-  totalExpensesValue.innerText = totalExpenses;
-
-  // Total Income
-  const totalIncomeInput = document.getElementById("total-income-input");
-  const totalIncomeValue = parseFloat(totalIncomeInput.value);
-
-  // Rest Balance
-  const restBalanceValue = document.getElementById("rest-balance");
-  const restBalanceText = parseFloat(restBalanceValue.innerText);
-  const restTotalBalance = totalIncomeValue - totalExpenses;
-  restBalanceValue.innerText = restTotalBalance;
-
-  // Saving
-}
-
-document
-  .getElementById("income-calculate-btn")
-  .addEventListener("click", function () {
-    updateBalance();
-  }); */
