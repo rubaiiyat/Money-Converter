@@ -46,3 +46,9 @@ body {
     width: 100%;
   }
 }
+
+@media only screen and (max-width: 320px) and (max-width: 569px) {
+  .income-input {
+    width: 100%;
+  }
+}
