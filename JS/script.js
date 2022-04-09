@@ -59,6 +59,38 @@ document
     }
   });
 
+document.getElementById("save-btn").addEventListener("click", function () {
+  const restBalacne = document.getElementById("rest-balance").innerText;
+
+  const saveInput = document.getElementById("save-input");
+  const saveInputValue = parseFloat(saveInput.value);
+  saveInput.value = saveInputValue;
+
+  const savingAmount = document.getElementById("saving-amount");
+  const remainingBalance = document.getElementById("remaining-balance");
+
+  const totalSavingAmount = (saveInputValue / 100) * restBalacne;
+  const totalRemainingBalacne = restBalacne - totalSavingAmount;
+
+  const errorField = document.getElementById("save-error");
+
+  if (isNaN(saveInputValue)) {
+    errorField.style.display = "block";
+    errorField.innerText =
+      "Error! Please Enter Positive Number Saving Input Field";
+  } else if (saveInputValue < 1) {
+    errorField.style.display = "block";
+    errorField.innerText = "Error! Please enter number greater than 0";
+  } else if (saveInputValue > restBalacne) {
+    errorField.style.display = "block";
+    errorField.innerText = "SORRY! Parcentage is more than your Rest Balacne.";
+  } else {
+    errorField.style.display = "none";
+    savingAmount.innerText = totalSavingAmount;
+    remainingBalance.innerText = totalRemainingBalacne;
+  }
+});
+
 /* function updateBalance() {
   // Total Food Cost
   const foodCostInput = document.getElementById("food-cost-input");

@@ -22,11 +22,11 @@
     </header>
     <main>
       <section class="mt-4">
-        <div class="d-flex justify-content-around">
+        <div class="d-lg-flex d-md-flex justify-content-around">
           <div class="image">
             <img src="IMAGE/img.jpg" alt="" />
           </div>
-          <div class="total-income w-50 text-center">
+          <div class="total-income  text-center">
             <h1 class="mt-4">Income</h1>
             <div class="container mt-4">
               <div class="row d-flex justify-content-center mb-3">
@@ -82,7 +82,9 @@
             </div>
             <div>
               <div>
-                <h6 id="error-field">Error!Please Type Positive Number</h6>
+                <h6 id="error-field" class="error-field">
+                  Error!Please Type Positive Number
+                </h6>
               </div>
               <button
                 id="income-calculate-btn"
@@ -101,7 +103,9 @@
                 <div>
                   <h5 class="mx-2">Save:</h5>
                 </div>
-                <div class="mx-2"><input type="text" value="20" /></div>
+                <div class="mx-2">
+                  <input id="save-input" type="text" value="20" />
+                </div>
                 <div class="mx-2">%</div>
                 <div class="mx-2">
                   <button id="save-btn" type="button" class="btn btn-primary">
@@ -110,8 +114,17 @@
                 </div>
               </div>
               <div class="mt-3">
-                <h3 class="mb-3">Saving Amount: <span></span></h3>
-                <h3>Remaining Balance: <span></span></h3>
+                <h3 class="mb-5">
+                  Saving Amount: <span id="saving-amount">00</span>
+                </h3>
+                <h3 class=>
+                  Remaining Balance: <span id="remaining-balance"> 00</span>
+                </h3>
+              </div>
+              <div>
+                <h6 id="save-error" class="error-field">
+                  Error!Please Type Positive Number
+                </h6>
               </div>
             </div>
           </div>

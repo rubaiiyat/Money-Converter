@@ -7,9 +7,12 @@ body {
 }
 .total-income {
   background-color: rgb(235, 232, 232);
+  width: 50%;
+  padding-top: 10px;
+  padding-bottom: 50px;
 }
 
-#error-field {
+.error-field {
   background-color: rgb(252, 126, 126);
   color: rgb(77, 4, 4);
   width: 50%;
@@ -18,4 +21,18 @@ body {
   display: none;
   border-radius: 5px;
   border: 1px solid;
+}
+@media only screen and (max-width: 688px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .image img {
+    width: 100%;
+  }
+
+  .total-income {
+    height: 100%;
+    width: 100%;
+  }
 }
